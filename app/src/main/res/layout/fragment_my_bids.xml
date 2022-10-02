@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:context=".ui.profile.MyBids">
+
+   <!-- <data>
+        <import type="com.example.qsn.R" />
+        <variable
+            name="viewModel"
+            type="com.example.qsn.viewmodels.BaseViewModel" />
+    </data>
+-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/grid"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <!--  <Button
+              android:id="@+id/textFieldwonspinner"
+              android:layout_width="111dp"
+              android:layout_height="35dp"
+              android:layout_marginBottom="12dp"
+              android:background="@drawable/backforfilterbutton"
+              android:drawableStart="@drawable/equilizers"
+              android:drawableEnd="@drawable/downarrow"
+              android:paddingLeft="5dp"
+              android:text="Won &amp; Lost"
+              android:textAlignment="textStart"
+              android:textColor="@color/qsnyellow"
+              android:textColorHint="#ffff"
+              android:textSize="10sp"
+              app:layout_constraintBottom_toTopOf="@+id/guideline58"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.163"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/textFieldcompleted"
+              app:layout_constraintVertical_bias="0.77">
+
+          </Button>
+  -->
+
+        <Button
+            android:id="@+id/textFieldcompleted"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/bgfor_tablayout"
+            android:text="completed"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/qsnyellow"
+            android:textColorHint="#ffff"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textFieldcurrent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/textFieldcurrent"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/bgfor_tablayout"
+            android:paddingStart="10dp"
+            android:text="current"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/qsnyellow"
+            android:textColorHint="#ffff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline58"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.823"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </Button>
+
+        <RadioButton
+
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:buttonTint="#ffff"
+            android:paddingEnd="20dp"
+            android:text="  Won"
+            android:textAlignment="textStart"
+            android:textColor="#ffff"
+            android:textColorHint="#ffff"
+            app:layout_constraintBottom_toTopOf="@+id/guideline58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldcompleted"
+            app:layout_constraintVertical_bias="0.368" />
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#ffff"
+            android:paddingEnd="20dp"
+
+            android:text="  Lost"
+            android:textAlignment="textStart"
+            android:textColor="#ffff"
+            android:textColorHint="#ffff"
+            app:layout_constraintBottom_toTopOf="@+id/guideline58"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toEndOf="@+id/radioButton5"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldcurrent"
+            app:layout_constraintVertical_bias="0.368" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclemybids"
+            android:layout_width="match_parent"
+            android:layout_height="494dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline58"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="14dp" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="211dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

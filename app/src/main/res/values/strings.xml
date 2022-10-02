@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">QSN</string>
+    <string name="arabic">Arabic</string>
+    <string name="english">English</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+    <string name="engaging_n_more_enlivening_result">Engaging \nMore,\nEnlivening \nResult</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="e_mail_mobile_no">E mail,Mobile No</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">E mail/Mobile No</string>
+    <string name="i_agree_to_the_terms_of_service_and_privacy_policy">I agree to the terms of service and Privacy policy</string>
+    <string name="option_1">filter1</string>
+    <string name="option_2">filter2</string>
+
+    <string-array name="auction_array">
+
+        <item>Won &amp; Lost</item>
+        <item>Ongoing &amp; Expired</item>
+
+    </string-array>
+    <string-array name="relevance_array">
+
+        <item>Relevance</item>
+        <item>Recently Added</item>
+        <item>Most Viewed</item>
+        <item>Price (low to high)</item>
+        <item>Price (high to low)</item>
+    </string-array>
+</resources>

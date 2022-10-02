@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".ui.profile.MyAds">
+
+    <!-- <data>
+         <import type="com.example.qsn.R" />
+         <variable
+             name="viewModel"
+             type="com.example.qsn.viewmodels.BaseViewModel" />
+     </data>
+ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundcolor"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid"
+            tools:layout_editor_absoluteX="-73dp"
+            tools:layout_editor_absoluteY="305dp">
+
+
+            <Button
+                android:id="@+id/auctionbtn"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/bgfor_tablayout"
+                android:text="Auctioned"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorgrey"
+                android:textColorHint="#ffff"
+
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/radioButton6"
+                app:layout_constraintEnd_toStartOf="@+id/lstdbtn"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/lstdbtn"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/bgfor_tablayout"
+                android:text="Listed"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorgrey"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.827"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Button>
+
+
+            <RadioButton
+
+                android:id="@+id/radioButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:buttonTint="#ffff"
+                android:paddingEnd="20dp"
+                android:text="  On Going"
+                android:textAlignment="textStart"
+                android:textColor="#ffff"
+
+                android:textColorHint="#ffff"
+                app:layout_constraintBottom_toBottomOf="@+id/radioButton6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auctionbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioButton
+
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:buttonTint="#ffff"
+                android:paddingEnd="20dp"
+                android:text="  Completed"
+                android:textAlignment="textStart"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.451"
+                app:layout_constraintStart_toEndOf="@+id/radioButton5"
+                app:layout_constraintTop_toBottomOf="@+id/lstdbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclemyads"
+                android:layout_width="match_parent"
+                android:layout_height="553dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioButton5"
+                app:layout_constraintVertical_bias="0.058" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <group android:id="@+id/nav_hed">
+    <item android:title="Profile"
+        android:icon="@drawable/duotone_user_1"
+        android:id="@+id/myProfile"/>
+    <item android:title="My Bids"
+        android:icon="@drawable/duotone_umbrella_2"
+        android:id="@+id/myBids"/>
+    <item android:title="My Ads"
+        android:icon="@drawable/duotone_windows"
+        android:id="@+id/myAds"/>
+    <item android:title="Saved Items"
+        android:id="@+id/addAnAdvert"
+        android:icon="@drawable/bookmark"/>
+    <item android:title="Terms and Conditions"
+        android:icon="@drawable/duotone_warning_circle"
+        android:id="@+id/termsAndConditions"/>
+    <item android:title="Contact Us"
+        android:icon="@drawable/duotone_mail"
+        android:id="@+id/aboutUs"/>
+    <item android:title="Change Mode"
+        app:actionLayout="@layout/navigationchangedarkmode"
+        android:icon="@drawable/duotone_settings"/>
+    <item android:title="Change Language"
+
+        app:actionLayout="@layout/navigationlanguagemode"
+        android:icon="@drawable/group_184"/>
+    </group>
+    <group android:id="@+id/nav_footer">
+        <item
+            android:id="@+id/nav_footer_1"
+            android:icon="@drawable/logout"
+            android:title="Logout"
+            />
+    </group>
+</menu>

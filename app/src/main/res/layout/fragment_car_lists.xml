@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.whytecreations.qsn.viewmodels.BaseViewModel" />
+
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/backgroundcolor"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid"
+            android:paddingBottom="35dp"
+            tools:context=".ui.auctionlist.AuctionLists">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/carlists"
+                android:layout_width="match_parent"
+                android:layout_height="563dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/carslistsbtn"
+                            android:layout_width="65dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/backforsomecard"
+                            app:cardBackgroundColor="#43F6F3F3"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView29"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/caradverticon" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textView65"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Cars"
+                            android:textAlignment="center"
+                            android:textColor="#F1E9E9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dealers_list_btn"
+                            android:layout_width="65dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/backforsomecard"
+                            app:cardBackgroundColor="#43F6F3F3"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/dealersicon" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textView47"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Dealers"
+                            android:textAlignment="center"
+                            android:textColor="#F1E9E9" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/rent_a_car_btn"
+                            android:layout_width="65dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/backforsomecard"
+                            app:cardBackgroundColor="#43F6F3F3"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/rentacaricon" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Rent a Car"
+                            android:textAlignment="center"
+                            android:textColor="#F1E9E9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/garage_btn"
+                            android:layout_width="65dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/backforsomecard"
+                            app:cardBackgroundColor="#43F6F3F3"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/garageicon" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textView49"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Garage"
+                            android:textAlignment="center"
+                            android:textColor="#F1E9E9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/spare_parts_btn"
+                            android:layout_width="65dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/backforsomecard"
+                            app:cardBackgroundColor="#43F6F3F3"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="2dp">
+
+                            <ImageView
+                                android:id="@+id/imageView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/sparepartsicon" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textView96"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Spare Parts"
+                            android:textAlignment="center"
+                            android:textColor="#F1E9E9" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/backgroundcolor">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/spinner"
+                        android:layout_width="166dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:drawableEnd="@drawable/ic_down_arrow"
+                        android:text="Sort:By Relevence"
+                        android:textColor="@color/textcolor_dark" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchview"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/bgforsearchview"
+                        android:text="search"
+                        android:visibility="invisible"></androidx.appcompat.widget.SearchView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

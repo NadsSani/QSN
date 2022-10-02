@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationhome"
+    app:startDestination="@id/homeActivity">
+
+    <fragment
+        android:id="@+id/homeActivity"
+        android:name="com.whytecreations.qsn.ui.home.HomeActivity"
+        android:label="HomeActivity" >
+        <action
+            android:id="@+id/action_homeActivity_to_signIn"
+            app:destination="@id/signIn" />
+        <action
+            android:id="@+id/action_homeActivity_to_dashBoardActivity"
+            app:destination="@id/dashBoardActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.whytecreations.qsn.ui.login.SignIn"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_signUp"
+            app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_signIn_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+        <action
+            android:id="@+id/action_signIn_to_dashBoardActivity"
+            app:destination="@id/dashBoardActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.whytecreations.qsn.ui.login.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signIn" />
+        <action
+            android:id="@+id/action_signUp_to_dashBoardActivity"
+            app:destination="@id/dashBoardActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.whytecreations.qsn.ui.login.ForgotPassword"
+        android:label="ForgotPassword" >
+        <action
+            android:id="@+id/action_forgotPassword_to_OTP"
+            app:destination="@id/OTP" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTP"
+        android:name="com.whytecreations.qsn.ui.login.OTP"
+        android:label="OTP" >
+        <action
+            android:id="@+id/action_OTP_to_createPassword"
+            app:destination="@id/createPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPassword"
+        android:name="com.whytecreations.qsn.ui.login.CreatePassword"
+        android:label="CreatePassword" >
+        <action
+            android:id="@+id/action_createPassword_to_dashBoardActivity"
+            app:destination="@id/dashBoardActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/dashBoardActivity"
+        android:name="com.whytecreations.qsn.ui.activity.DashBoardActivity"
+        android:label="DashBoardActivity" />
+</navigation>

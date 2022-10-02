@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Ongoing &amp; Expired"
+        android:icon="@drawable/duotone_user_1"
+        android:id="@+id/myProfile"/>
+    <item android:title="My Bids"
+        android:icon="@drawable/duotone_umbrella_2"
+        android:id="@+id/myBids"/>
+    <item android:title="My Ads"
+        android:icon="@drawable/duotone_windows"/>
+</menu>

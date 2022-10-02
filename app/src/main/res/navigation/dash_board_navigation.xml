@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dash_board_navigation"
+    app:startDestination="@id/dashBoard">
+
+    <fragment
+        android:id="@+id/dashBoard"
+        android:name="com.whytecreations.qsn.ui.home.DashBoard"
+        android:label="DashBoard" >
+        <action
+            android:id="@+id/action_dashBoard_to_auctionLists"
+            app:destination="@id/auctionLists" />
+        <action
+            android:id="@+id/action_dashBoard_to_rentCarList"
+            app:destination="@id/rentACarDetails" />
+        <action
+            android:id="@+id/action_dashBoard_to_carLists"
+            app:destination="@id/carLists" >
+            <argument
+                android:name="chooser"
+                app:argType="string"
+                android:defaultValue="Nothing" />
+        </action>
+        <action
+            android:id="@+id/action_dashBoard_to_dealersList"
+            app:destination="@id/dealersList" />
+        <action
+            android:id="@+id/action_dashBoard_to_garage"
+            app:destination="@id/garage" />
+        <action
+            android:id="@+id/action_dashBoard_to_spareParts"
+            app:destination="@id/spareParts" />
+        <action
+            android:id="@+id/action_dashBoard_to_myProfile"
+            app:destination="@id/myProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/auctionLists"
+        android:name="com.whytecreations.qsn.ui.auctionlist.AuctionLists"
+        android:label="AuctionLists" >
+        <action
+            android:id="@+id/action_auctionLists_to_auctionListCarNumber"
+            app:destination="@id/auctionListCarNumber" />
+        <action
+            android:id="@+id/action_auctionLists_to_auctionListphonenumber"
+            app:destination="@id/auctionListphonenumber" />
+    </fragment>
+    <fragment
+        android:id="@+id/auctionListCarNumber"
+        android:name="com.whytecreations.qsn.ui.auctionlist.AuctionListCarNumber"
+        android:label="AuctionList Car Number" />
+    <fragment
+        android:id="@+id/auctionListphonenumber"
+        android:name="com.whytecreations.qsn.ui.auctionlist.AuctionListphonenumber"
+        android:label="AuctionListphonenumber" />
+    <fragment
+        android:id="@+id/addDetails"
+        android:name="com.whytecreations.qsn.ui.auctionlist.AddDetails"
+        android:label="Auction Details" />
+    <fragment
+        android:id="@+id/carLists"
+        android:name="com.whytecreations.qsn.ui.carlist.CarLists"
+        android:label="Cars" >
+        <action
+            android:id="@+id/action_carLists_to_filterFrag"
+            app:destination="@id/filterFrag" />
+        <action
+            android:id="@+id/action_carLists_to_carDealersDetails"
+            app:destination="@id/carDealersDetails" />
+        <argument
+            android:name="chooser"
+            app:argType="string"
+            android:defaultValue="Nothing" />
+        <action
+            android:id="@+id/action_carLists_to_filterFrag2"
+            app:destination="@id/filterFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/rentACarDetails"
+        android:name="com.whytecreations.qsn.ui.carlist.rentacar.RentACarDetails"
+        android:label="Rent a Car Details" >
+        <action
+            android:id="@+id/action_rentCarList_to_filterFrag"
+            app:destination="@id/filterFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealersList"
+        android:name="com.whytecreations.qsn.ui.carlist.DealersList"
+        android:label="DealersList" >
+        <action
+            android:id="@+id/action_dealersList_to_filterFrag"
+            app:destination="@id/filterFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/garage"
+        android:name="com.whytecreations.qsn.ui.carlist.garage.GarageDetails"
+        android:label="Garage" >
+        <action
+            android:id="@+id/action_garage_to_filterFrag"
+            app:destination="@id/filterFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/spareParts"
+        android:name="com.whytecreations.qsn.ui.carlist.spareparts.SparePartsDetails"
+        android:label="SpareParts" >
+        <action
+            android:id="@+id/action_spareParts_to_filterFrag"
+            app:destination="@id/filterFrag" />
+        <action
+            android:id="@+id/action_spareParts_to_subCategories"
+            app:destination="@id/subCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFrag"
+        android:name="com.whytecreations.qsn.ui.carlist.cars.FilterFrag"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+    </fragment>
+    <fragment
+        android:id="@+id/subCategories"
+        android:name="com.whytecreations.qsn.ui.filter.SubCategories"
+        android:label="SubCategories" />
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.whytecreations.qsn.ui.profile.MyProfile"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/myBids"
+        android:name="com.whytecreations.qsn.ui.profile.MyBids"
+        android:label="My Bids"
+        tools:layout="@layout/fragment_my_bids" />
+    <fragment
+        android:id="@+id/myAds"
+        android:name="com.whytecreations.qsn.ui.profile.MyAds"
+        android:label="My Ads"
+        tools:layout="@layout/fragment_my_ads" >
+        <action
+            android:id="@+id/action_myAds_to_featureListed"
+            app:destination="@id/featureListed" />
+        <action
+            android:id="@+id/action_myAds_to_featureAuction"
+            app:destination="@id/featureAuction" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndConditions"
+        android:name="com.whytecreations.qsn.ui.profile.TermsAndConditions"
+        android:label="fragment_terms_and_conditions"
+        tools:layout="@layout/fragment_terms_and_conditions" />
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.whytecreations.qsn.ui.profile.NavigationFragment"
+        android:label="fragment_navigation"
+        tools:layout="@layout/fragment_navigation" />
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.whytecreations.qsn.ui.profile.AboutUs"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/addAnAdvert"
+        android:name="com.whytecreations.qsn.ui.advert.AddAnAdvert"
+        android:label="fragment_add_an_advert"
+        tools:layout="@layout/fragment_add_an_advert" >
+        <action
+            android:id="@+id/action_addAnAdvert_to_addAnAdvert1"
+            app:destination="@id/addAnAdvert1" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAnAdvert1"
+        android:name="com.whytecreations.qsn.ui.advert.AddAnAdvert1"
+        android:label="AddAnAdvert1" >
+        <action
+            android:id="@+id/action_addAnAdvert1_to_addAnAdvert"
+            app:destination="@id/addAnAdvert" />
+    </fragment>
+    <fragment
+        android:id="@+id/featureAuction"
+        android:name="com.whytecreations.qsn.ui.auctionlist.FeatureAuction"
+        android:label="FeatureAuction" />
+    <fragment
+        android:id="@+id/featureListed"
+        android:name="com.whytecreations.qsn.ui.auctionlist.FeatureListed"
+        android:label="FeatureListed" />
+    <fragment
+        android:id="@+id/carDetailsPage"
+        android:name="com.whytecreations.qsn.ui.carlist.cars.CarDetailsPage"
+        android:label="CarDetailsPage" />
+    <fragment
+        android:id="@+id/carDealersDetails"
+        android:name="com.whytecreations.qsn.ui.carlist.dealers.CarDealersDetails"
+        android:label="Car Dealers Detail"
+        tools:layout="@layout/fragment_car_dealers_details" />
+</navigation>

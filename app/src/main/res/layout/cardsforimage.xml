@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.whytecreations.qsn.R" />
+        <variable name="carnumbers" type="com.whytecreations.qsn.datamodels.BaseModel"/>
+        <variable
+            name="listener"
+            type="com.whytecreations.qsn.listeners.ItemSelectListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:onClick="@{()->listener.onItemSelected(carnumbers)}"
+        app:background="@{carnumbers.isSelected?@drawable/bgfortabibuttons:@drawable/bgnothing}"
+        app:cardElevation="2dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="@{carnumbers.isSelected?@drawable/bgforauctiontab:@drawable/bgnothing}"
+            android:onClick="@{()->listener.onItemSelected(carnumbers)}">
+
+            <ImageView
+                android:id="@+id/imageviewcommon"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:paddingStart="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.404"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                app:srcCompat="@{carnumbers.image}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

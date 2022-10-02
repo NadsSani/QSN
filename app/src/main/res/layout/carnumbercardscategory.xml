@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.whytecreations.qsn.R" />
+        <variable name="carnumbers" type="com.whytecreations.qsn.datamodels.BaseModel"/>
+        <variable
+            name="listener"
+            type="com.whytecreations.qsn.listeners.ItemSelectListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:onClick="@{()->listener.onItemSelected(carnumbers)}"
+        app:background="@{carnumbers.isSelected?@drawable/bgfortabibuttons:@drawable/bgnothing}"
+        app:cardElevation="2dp"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@{carnumbers.isSelected?@drawable/bgfortabibuttons:@drawable/bgnothing}"
+            android:onClick="@{()->listener.onItemSelected(carnumbers)}">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/helveticaneuelight"
+                android:paddingEnd="8dp"
+                android:text="@{carnumbers.name}"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.484"
+                tools:text="Casual" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

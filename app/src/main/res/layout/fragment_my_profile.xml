@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.MyProfile">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid">
+
+
+            <LinearLayout
+                android:id="@+id/bottombox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginStart="15dp"
+                android:paddingEnd="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topbox"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textField"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:drawableStart="@drawable/duotone_user_1"
+                    android:drawableEnd="@drawable/path_3716"
+                    android:paddingBottom="15dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="20dp"
+                    app:drawableEndCompat="@drawable/rightarrow"
+                    android:text="    Edit Profile"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/navigationtextcolor"
+                    android:textColorHint="@color/navigationtextcolor"
+                    tools:layout_editor_absoluteY="152dp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textField1"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:drawableEndCompat="@drawable/rightarrow"
+                    android:drawableStart="@drawable/payment"
+                    android:drawableEnd="@drawable/path_3716"
+                    android:paddingStart="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="20dp"
+                    android:text="   Payment History"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/navigationtextcolor"
+                    android:textColorHint="@color/navigationtextcolor"
+                    tools:layout_editor_absoluteY="152dp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textField4"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:drawableEndCompat="@drawable/rightarrow"
+                    android:drawableStart="@drawable/changepassword"
+                    android:drawableEnd="@drawable/path_3716"
+                    android:paddingStart="20dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="15dp"
+                    android:text="     Change Password"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/navigationtextcolor"
+                    android:textColorHint="@color/navigationtextcolor"
+                    tools:layout_editor_absoluteY="152dp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textField5"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:drawableStart="@drawable/emailaddress"
+                    android:drawableEnd="@drawable/path_3716"
+                    android:paddingStart="20dp"
+                    app:drawableEndCompat="@drawable/rightarrow"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="15dp"
+                    android:text="    Change Email Address"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/navigationtextcolor"
+                    android:textColorHint="@color/navigationtextcolor"
+                    tools:layout_editor_absoluteY="152dp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/topbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="81dp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="81dp"
+                            android:layout_height="81dp"
+                            android:layout_marginStart="15dp"
+                            android:src="@drawable/profileicon" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="-2dp"
+                            android:layout_marginBottom="53dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/additionicon" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="20dp">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thousif Hashim"
+                            android:textColor="@color/textcolor" />
+
+                        <TextView
+                            android:id="@+id/textView82"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CEO Whyte Creations"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="50dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/phoneiconae"
+                        android:text="   +974 0000 0000"
+                        android:textColor="@color/textcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="50dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/messagee"
+                        android:text="   thousif@whytecreations.in"
+                        android:textColor="@color/textcolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="50dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/location"
+                        android:text="   58 Suhaym Bin Hamad, Office No.7, Al Sadd"
+                        android:textColor="@color/textcolor" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

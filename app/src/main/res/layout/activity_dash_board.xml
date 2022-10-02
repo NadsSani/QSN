@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.whytecreations.qsn.viewmodels.HomeActViewModel" />
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#02FFFFFF"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/linearLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DashBoardActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="#0AFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0AFFFFFF"
+            android:elevation="10dp"
+            app:titleCentered="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:title = "QSN"
+            app:titleMarginEnd= "250dp"
+            app:titleTextColor="#ffff">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="QSN"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline62"
+                    app:layout_constraintHorizontal_bias="0.543"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"></TextView>
+
+                <RelativeLayout
+                    android:id="@+id/badge4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline62"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.500">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_layout3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:id="@+id/myButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bell"
+                            android:elevation="4dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="#fff"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/badge_notification_4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignLeft="@id/relative_layout3"
+                        android:layout_alignBottom="@id/relative_layout3"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/ellipse_18"
+                        android:text="12"
+                        android:textColor="#FFF"
+                        android:textSize="6sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/equalizer"
+                        android:padding="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/equalizer"
+                        android:visibility="invisible">
+                    </ImageView>
+                    <Button
+                        android:id="@+id/featurebtn"
+                        android:text="Feature Now"
+                        android:visibility="gone"
+                        android:layout_width="80dp"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/curved_bg_signin"
+                        android:layout_height="30dp">
+                    </Button>
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.77" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <com.nads.curved_bottom_navigation.CurvedBottomNavigationView
+            android:id="@+id/bottomNavigationViewmain"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cbn_bg="#1A2E41"
+            app:cbn_fabBg="@color/qsnyellow"
+            app:cbn_selectedColor="#425D77"
+            app:cbn_unSelectedColor="#ffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_dashboard"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="-3dp"
+                app:defaultNavHost="true"
+                app:layout_anchor="@+id/linearLayout"
+                app:layout_anchorGravity="center"
+                app:navGraph="@navigation/dash_board_navigation"
+                tools:layout="@layout/fragment_dash_board" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:background="#1B3043"
+            android:elevation="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemIconTint="@color/navigationtextcolor"
+            app:itemTextColor="@color/navigationtextcolor"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header_menu"
+            app:menu="@menu/nav_drawer_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>
